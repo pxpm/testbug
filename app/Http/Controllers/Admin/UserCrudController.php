@@ -38,6 +38,8 @@ class UserCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::column('id')->type('number')->label('ID')->priority(5);
+
         CRUD::column('name')->type('text')->limit(9999999999999);
         CRUD::column('name2')->type('text');
         CRUD::column('name5')->type('text');
@@ -56,11 +58,6 @@ class UserCrudController extends CrudController
         CRUD::column('name13')->type('text');
         CRUD::column('name14')->type('text');
         CRUD::column('name15')->type('text');
-        CRUD::column('name16')->type('text');
-        CRUD::column('name17')->type('text');
-        CRUD::column('name18')->type('text');
-        CRUD::column('name19')->type('text');
-        CRUD::column('name20')->type('text');
 
         CRUD::enableResponsiveTable();
 
